@@ -1,10 +1,30 @@
 *** Settings ***
-Library    RobotLibrary.py
+Library    Selenium2Library
+Library    robot_library.py
+Test Teardown  Run Keyword If Test Failed   Capture Page Screenshot
 
 *** Test Cases ***
-My Test
+Yahoo Transit Test
     run_positive_test_case_yahoo_transit
+Login Error Test
     run_negative_test_case_login_error
+Test Panda
+    test_py_panda
+Sample Result Fail
+    test raise fail
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #*** Settings ***
